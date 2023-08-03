@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { UiComponent } from 'modules/shared/ui';
 import { OrdersComponent } from './orders.component';
 
 describe('OrdersComponent', () => {
@@ -7,6 +8,7 @@ describe('OrdersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [UiComponent],
       declarations: [OrdersComponent],
     }).compileComponents();
 
