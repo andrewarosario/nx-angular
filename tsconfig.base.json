@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "modules/orders": ["modules/orders/src/index.ts"],
       "modules/products": ["modules/products/src/index.ts"]
     }
   },
