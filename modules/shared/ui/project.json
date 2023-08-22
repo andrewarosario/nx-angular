@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/shared/ui/src",
   "prefix": "lib",
-  "tags": [],
+  "tags": ["type:ui", "scope:shared"],
   "projectType": "library",
   "targets": {
     "test": {
