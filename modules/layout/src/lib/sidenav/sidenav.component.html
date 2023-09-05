@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    [opened]="opened"
+    (openedChange)="setSidenavStatus($event)"
+    [mode]="(isSmallScreen$ | async) ? 'over' : 'side'"
+  >
+    <h3>Nome do App</h3>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <header class="open-close-sidenav-container">
+      <button mat-icon-button (click)="onToggleMenuClick()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <small> Olá! Seja bem vindo!</small>
+    </header>
+
+    <main>
+      <ng-content></ng-content>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

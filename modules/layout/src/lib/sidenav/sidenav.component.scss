@@ -1,0 +1,52 @@
+mat-sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+
+  background-color: #f1f1f1;
+}
+
+mat-sidenav {
+  width: 270px;
+  background-color: indigo;
+}
+
+.open-close-sidenav-container {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 60px;
+  padding: 20px 0;
+  background-color: #fff;
+
+  > button {
+    margin-left: 10px;
+  }
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  color: #636363;
+}
+
+h3 {
+  margin-top: 2rem;
+  color: #f1f1f1;
+}
+
+small {
+  margin-left: 1rem;
+}

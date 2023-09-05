@@ -1,1 +1,1 @@
-export * from './lib/layout.module';
+export * from './lib/sidenav/sidenav.component';
