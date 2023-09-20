@@ -90,6 +90,9 @@
       "options": {
         "buildTarget": "my-app:build"
       }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release"
     }
   }
 }
