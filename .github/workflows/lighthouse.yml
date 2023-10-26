@@ -1,0 +1,27 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and start the project
+        run: npm run build && npx serve dist/my-app
+
+      - uses: actions/checkout@v2
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: http://localhost:3000
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse audits to google temporary storage
