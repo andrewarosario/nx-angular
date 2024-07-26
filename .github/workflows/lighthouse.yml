@@ -1,4 +1,4 @@
-name: CI
+name: Lighthouse
 on:
   pull_request:
     branches:
@@ -17,5 +17,6 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: './.github/lighthouse/lightrouserc.json'
+          budgetPath: './.github/lighthouse/budget.json'
           uploadArtifacts: true
           temporaryPublicStorage: true
