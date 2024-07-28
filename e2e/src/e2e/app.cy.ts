@@ -4,10 +4,24 @@ describe('my-app', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome my-app');
+  });
+
+  it('should pass lighthouse audit', () => {
+    const customThresholds = {
+      performance: 30,
+      accessibility: 50,
+      seo: 70,
+      'first-contentful-paint': 2000,
+      'largest-contentful-paint': 10000,
+      'cumulative-layout-shift': 0.1,
+      'total-blocking-time': 800,
+    };
+
+    const desktopConfig = {
+      formFactor: 'desktop',
+      screenEmulation: { disabled: true },
+    };
+    cy.lighthouse(customThresholds, desktopConfig);
   });
 });

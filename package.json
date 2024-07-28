@@ -37,6 +37,7 @@
     "@commitlint/config-conventional": "^17.7.0",
     "@commitlint/config-nx-scopes": "^17.6.4",
     "@commitlint/cz-commitlint": "^17.7.1",
+    "@cypress-audit/lighthouse": "^1.4.2",
     "@nx/cypress": "16.6.0",
     "@nx/eslint-plugin": "16.6.0",
     "@nx/jest": "16.6.0",
