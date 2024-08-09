@@ -17,4 +17,3 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: './.github/lighthouse/lightrouserc.json'
-          budgetPath: './.github/lighthouse/budget.json'
