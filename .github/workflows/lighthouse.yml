@@ -17,3 +17,4 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: './.github/lighthouse/lightrouserc.json'
+          temporaryPublicStorage: true
