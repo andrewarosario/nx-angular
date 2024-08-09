@@ -18,5 +18,3 @@ jobs:
         with:
           configPath: './.github/lighthouse/lightrouserc.json'
           budgetPath: './.github/lighthouse/budget.json'
-          uploadArtifacts: true
-          temporaryPublicStorage: true
