@@ -1,0 +1,10 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist/my-app"
+    },
+    "assert": {
+      "preset": "lighthouse:no-pwa"
+    }
+  }
+}
